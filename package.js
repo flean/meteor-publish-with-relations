@@ -10,11 +10,3 @@ Package.on_use(function(api) {
   api.use('coffeescript@2.0.3_4', 'server');
   api.add_files('publish_with_relations.coffee', 'server');
 });
-
-Package.on_test(function(api) {
-  api.use(['tinytest', 'coffeescript', "flean:publish-with-relations", 'mongo-livedata'], 'server');
-  api.use(['tinytest'], 'client')
-  
-  api.add_files('publish_with_relations_test.coffee', 'server');
-  api.add_files('tests/client.js', 'client');
-});
